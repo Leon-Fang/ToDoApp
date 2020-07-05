@@ -5,6 +5,9 @@ from .forms import *
 # Create your views here.
 
 def index(request):
+    return render(request,'tasks/index.html')
+
+def taskList(request):
     tasks = Task.objects.all()
 
     form = TaskForm()
