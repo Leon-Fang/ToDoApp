@@ -1,0 +1,12 @@
+<head>
+    {% load static %}
+ 
+    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
+</head>
+<p>Are you sure you want delete "{{item}}"?</p>
+
+<a href="{% url 'list' %}">Cancel</a>
+<form method="POST" action="">
+    {% csrf_token %}
+    <input type="submit", name="confirm">
+</form>
