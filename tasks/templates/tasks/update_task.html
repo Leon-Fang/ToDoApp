@@ -1,0 +1,30 @@
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
+    <style>
+        .updateForm {
+            font-size: 30px;
+        }
+        input[type=submit] {
+            width: 20%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgb(20, 223, 105);
+        }
+    </style>
+
+</head>
+
+<h3> Update Task </h3>
+
+<form method="POST" action="">
+    {% csrf_token %}
+    <div class="updateForm">
+        {{form}}
+    </div>
+    
+    <input type="submit" name="Update Task">
+</form>
