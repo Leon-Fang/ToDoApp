@@ -3,6 +3,7 @@
  
     <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
 </head>
+<label>Welcome! {% user.username if request.user.is_authenticated %} </label> 
 <p>Are you sure you want delete "{{item}}"?</p>
 
 <a href="{% url 'list' %}">Cancel</a>

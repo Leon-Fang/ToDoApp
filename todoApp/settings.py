@@ -101,6 +101,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Login required 
+LOGIN_URL = '/login'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/

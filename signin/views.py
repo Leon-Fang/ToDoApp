@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponseRedirect, HttpResponse,redirect
+from django.shortcuts import render, HttpResponseRedirect, HttpResponse, redirect
 from django.contrib import auth
 from tasks import *
 
@@ -10,7 +10,7 @@ def login_view(request):
     username = request.POST.get('username','')
     password = request.POST.get('password','')
     user = auth.authenticate(username=username, password=password)
-    if user is not None and user.is_active:
+    if user:
         auth.login(request, user)
     #    return HttpResponse("welcome! " + username)
         return redirect('list')
@@ -19,4 +19,4 @@ def login_view(request):
 
 def logout_view(request):
     auth.logout(request)
-    return HttpResponseRedirect("index.html")
+    return HttpResponseRedirect('login')
