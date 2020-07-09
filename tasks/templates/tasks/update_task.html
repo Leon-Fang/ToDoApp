@@ -1,6 +1,7 @@
 <head>
     {% load static %}
     <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/user-defined-theme.css' %}">
     <style>
         .updateForm {
             font-size: 30px;
@@ -19,7 +20,11 @@
 </head>
 
 <h3> Update Task </h3>
-<label >Welcome! {{ username }} </label> 
+<div class="user_label" >
+    <a href="">Welcome! {{ username }}</a>
+    <label > </label>
+    <a href="{% url 'logout' %}" class="logout"> Logout</a>
+</div>
 
 <form method="POST" action="">
     {% csrf_token %}

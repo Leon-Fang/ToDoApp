@@ -30,12 +30,21 @@
         {% if request.user.is_authenticated %}
 
 3. 每个页面提供logout 功能:
+--Done
+        每个html添加以下，并引用自定义CSS
+        <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/user-defined-theme.css' %}">
+        <div class="user_label">
+         <a href="">Welcome! {{ request.user }}</a>
+         <label > </label>
+         <a href="{% url 'logout' %}" class="logout"> Logout</a>
+        </div>
 
-2. 界面美化； update/delete etc..
-3. 数据存入数据库；
-4. 增加用户;
-5. 用户登陆要求；
-6. 用户界面细化， 如未完成一个tab， 已完成一个tab， update comment功能；
-7. Jira 数据展示；
-8. List 界面 点击 task 计入详情页；
-9. bug fix: refresh the last entered content will be saved.
+4. 数据存入数据库；
+5. 增加用户;
+6. 用户登陆要求-done
+7. 用户界面细化， 如未完成一个tab， 已完成一个tab， update comment功能；
+8. Jira 数据展示；
+9. List 界面 点击 task 计入详情页；
+10. bug fix: refresh the last entered content will be saved.
+
+4. 界面美化； update/delete etc..
