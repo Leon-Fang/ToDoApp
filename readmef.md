@@ -30,7 +30,7 @@
         {% if request.user.is_authenticated %}
 
 3. 每个页面提供logout 功能:
---Done
+--partial Done
         每个html添加以下，并引用自定义CSS
         <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/user-defined-theme.css' %}">
         <div class="user_label">
@@ -38,6 +38,7 @@
          <label > </label>
          <a href="{% url 'logout' %}" class="logout"> Logout</a>
         </div>
+        添加了logout 页面可以选择 确认退出或者 取消（返回 list 界面）
 
 4. 数据存入数据库；
 5. 增加用户;

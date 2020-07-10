@@ -17,6 +17,11 @@ def login_view(request):
     else:
         return render(request,'index.html')
 
+def logout_page(request):
+    print('next_href', request.path)
+    return render(request, 'logout.html')
+
 def logout_view(request):
     auth.logout(request)
     return HttpResponseRedirect('login')
+
