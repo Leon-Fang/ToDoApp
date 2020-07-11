@@ -1,9 +1,15 @@
 <head>
     {% load static %}
  
-    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">    
+    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/user-defined-theme.css' %}">
 </head>
-<label>Welcome! {% user.username if request.user.is_authenticated %} </label> 
+<div class="user_label" >
+    <a href="">Welcome! {{ request.user }}</a>
+    <label > </label>
+    <a href="{% url 'logout' %}" class="logout"> Logout</a>
+</div>
+
 <p>Are you sure you want delete "{{item}}"?</p>
 
 <a href="{% url 'list' %}">Cancel</a>

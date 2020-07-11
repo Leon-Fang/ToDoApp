@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Logout</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        p {
+            text-align: center;
+        }
+        .form1 {
+            text-align: center;
+        }
+        .cc_btn {            
+            size: 70px;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <p>Are you sure to logout?</p>
+    <form class="form1">
+        {% csrf_token %}
+        <a class="cc_btn" href = "{% url 'logout1' %}" >Confirm</a>
+        
+        <a class="cc_btn" href = "{% url 'list' %}">Cancel</a>
+    </form>
+    
+</body>
+</html>
